@@ -27,15 +27,15 @@ func Importanti(testo string) map[string]float64 {
 			if i == j {
 				break
 			}
-			if parole[i] == parole[j] && parole[i+1] == parole[j+1] && parole[i+2] == parole[j+2] && parole[i+3] == parole[j+3] {
+			if j+3 < len(parole) && i+3 < len(parole) && parole[i] == parole[j] && parole[i+1] == parole[j+1] && parole[i+2] == parole[j+2] && parole[i+3] == parole[j+3] {
 				importanti[parole[i]+" "+parole[i+1]+" "+parole[i+2]+" "+parole[i+3]]++
 				break
 			}
-			if parole[i] == parole[j] && parole[i+1] == parole[j+1] && parole[i+2] == parole[j+2] {
+			if j+2 < len(parole) && i+2 < len(parole) && parole[i] == parole[j] && parole[i+1] == parole[j+1] && parole[i+2] == parole[j+2] {
 				importanti[parole[i]+" "+parole[i+1]+" "+parole[i+2]]++
 				break
 			}
-			if parole[i] == parole[j] && parole[i+1] == parole[j+1] {
+			if j+1 < len(parole) && i+1 < len(parole) && parole[i] == parole[j] && parole[i+1] == parole[j+1] {
 				importanti[parole[i]+" "+parole[i+1]]++
 			}
 
