@@ -14,7 +14,7 @@ func TestGetPeriodi(t *testing.T) {
 		args args
 		want []string
 	}{
-		{"primo", args{testo: "Ciao, come va? Tutto bene."}, []string{"Ciao", "come va", "Tutto bene", ""}},
+		{"primo", args{testo: "Ciao, come va? Tutto bene."}, []string{"Ciao", "come va", "Tutto bene"}},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
