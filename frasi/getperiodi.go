@@ -14,7 +14,10 @@ func GetPeriodi(testo string) []string {
 
 	var periodi []string
 	for _, frase := range strings.Split(str, "\n") {
-		periodi = append(periodi, strings.TrimSpace(frase))
+		if len(frase) == 0 {
+			continue
+		}
+		periodi = append(periodi, strings.Trim(frase, " \t\n,.;:\""))
 	}
 
 	return periodi
